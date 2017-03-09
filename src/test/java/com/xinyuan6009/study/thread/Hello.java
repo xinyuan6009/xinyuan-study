@@ -2,6 +2,7 @@ package com.xinyuan6009.study.thread;
 
 import com.xinyuan6009.study.ThreadStudy;
 
+import java.util.Stack;
 import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -23,21 +24,19 @@ public class Hello {
     /**
      * 测试方法
      */
-    public static void test(){
+    public static void test() {
 
     }
 
     /**
-     *
      * @param args
      */
     public static void main(String[] args) throws InterruptedException {
 
 
-
         ExecutorService pool = newFixedThreadPool(10);
 
-        for(int i=0;i<8;i++){
+        for (int i = 0; i < 8; i++) {
             pool.submit(new Runnable() {
                 @Override
                 public void run() {
